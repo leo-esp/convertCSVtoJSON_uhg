@@ -9,7 +9,7 @@ var hospitaisIndicados = [];
 var planos = [];
 var i = 0;
 
-fs.createReadStream('finalx11.csv', {encoding: 'latin1'})
+fs.createReadStream('data.csv', {encoding: 'latin1'})
     .pipe(csv({ delimiter: ';', objectMode: true, headers: true }))
     .on('data', (row) => {
         console.log(`${++i} processed lines`);
